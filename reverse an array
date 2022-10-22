@@ -1,0 +1,30 @@
+//reversing an array in java
+import java.util.Scanner;
+
+public class Main
+{
+   public static void main(String args[])
+   {
+
+     int arr[] = {10, 20, 30, 40, 50};
+
+     int n=arr.length;
+     for(int i=n-1; i>=0; i--)
+       System.out.print(arr[i]+" "); 
+    }
+}
+
+
+
+//reversing an array in c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+   int arr[] = {10, 20, 30, 40, 50};
+   int n = sizeof(arr)/sizeof(arr[0]);
+
+   for(int i=n-1; i>=0; i--)
+      cout<<arr[i]<<" ";
+}
