@@ -1,0 +1,21 @@
+//Determine if a string is numeric 
+#include <iostream>
+#include <string>
+ 
+bool isNumeric(std::string const &str)
+{
+    auto it = str.begin();
+    while (it != str.end() && std::isdigit(*it)) {
+        it++;
+    }
+    return !str.empty() && it == str.end();
+}
+ 
+int main()
+{
+    std::string str = "100";
+ 
+    std::cout << std::boolalpha << isNumeric(str) << std::endl;        // true
+ 
+    return 0;
+}
