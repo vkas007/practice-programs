@@ -1,0 +1,27 @@
+// count of occurrence of a word in the given string
+#include <bits/stdc++.h>
+using namespace std;
+int countOccurrences(char *str,string word)
+{
+	char *p;
+	vector<string> a;
+
+	p = strtok(str, " ");
+	while (p != NULL)
+	{
+		a.push_back(p);
+		p = strtok(NULL, " ");
+	}
+	int c = 0;
+	for (int i = 0; i < a.size(); i++)
+		if (word == a[i])
+			c++;
+	return c;
+}
+int main()
+{
+	char str[] = "The world shall know pain ";
+	string word = "world";
+	cout << countOccurrences(str, word);
+	return 0;
+}
